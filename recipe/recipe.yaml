@@ -10,7 +10,7 @@ source:
     sha256: 30da30414a7bbb3c88fb8d3f286bf36b2ab8f7ce7010702dca3d21578a58080c
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - package:
@@ -68,13 +68,13 @@ outputs:
             - cross-python_${{ target_platform }}
             - python
       host:
-        - ${{ pin_subpackage('libtrintrin', exact=True) }}
+        - ${{ pin_subpackage('libtrintrin', upper_bound='x.x.x') }}
         - python
         - libyarp
         - pybind11
         - pybind11-abi
       run:
-        - ${{ pin_subpackage('libtrintrin', exact=True) }}
+        - ${{ pin_subpackage('libtrintrin', upper_bound='x.x.x') }}
         - python
     tests:
       - python:
@@ -84,8 +84,10 @@ outputs:
   - package:
       name: trintrin
     requirements:
+      host:
+        - libyarp
       run:
-        - ${{ pin_subpackage('libtrintrin', exact=True) }}
+        - ${{ pin_subpackage('libtrintrin', upper_bound='x.x.x') }}
         - ${{ pin_subpackage('trintrin-python', upper_bound='x.x.x') }}
     tests:
       - script:
