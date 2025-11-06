@@ -68,13 +68,13 @@ outputs:
             - cross-python_${{ target_platform }}
             - python
       host:
-        - ${{ pin_subpackage('libtrintrin', exact=True) }}
+        - ${{ pin_subpackage('libtrintrin', upper_bound='x.x.x') }}
         - python
         - libyarp
         - pybind11
         - pybind11-abi
       run:
-        - ${{ pin_subpackage('libtrintrin', exact=True) }}
+        - ${{ pin_subpackage('libtrintrin', upper_bound='x.x.x') }}
         - python
     tests:
       - python:
@@ -87,7 +87,7 @@ outputs:
       host:
         - libyarp
       run:
-        - ${{ pin_subpackage('libtrintrin', exact=True) }}
+        - ${{ pin_subpackage('libtrintrin', upper_bound='x.x.x') }}
         - ${{ pin_subpackage('trintrin-python', upper_bound='x.x.x') }}
     tests:
       - script:
