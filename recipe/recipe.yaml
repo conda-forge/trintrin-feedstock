@@ -84,6 +84,8 @@ outputs:
   - package:
       name: trintrin
     requirements:
+      host:
+        - libyarp
       run:
         - ${{ pin_subpackage('libtrintrin', exact=True) }}
         - ${{ pin_subpackage('trintrin-python', upper_bound='x.x.x') }}
