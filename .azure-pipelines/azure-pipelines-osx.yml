@@ -8,11 +8,17 @@ jobs:
     vmImage: macOS-15
   strategy:
     matrix:
-      osx_64_:
-        CONFIG: osx_64_
+      osx_64_libyarp3.12.1:
+        CONFIG: osx_64_libyarp3.12.1
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_:
-        CONFIG: osx_arm64_
+      osx_64_libyarp3.12.2:
+        CONFIG: osx_64_libyarp3.12.2
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_libyarp3.12.1:
+        CONFIG: osx_arm64_libyarp3.12.1
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_libyarp3.12.2:
+        CONFIG: osx_arm64_libyarp3.12.2
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables: {}
