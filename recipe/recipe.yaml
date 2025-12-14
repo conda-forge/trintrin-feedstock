@@ -1,5 +1,5 @@
 context:
-  version: "0.0.1"
+  version: "0.0.2"
 
 recipe:
   name: trintrin-split
@@ -7,10 +7,10 @@ recipe:
 
 source:
   - url: https://github.com/ami-iit/trintrin/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 30da30414a7bbb3c88fb8d3f286bf36b2ab8f7ce7010702dca3d21578a58080c
+    sha256: 4cd3140daab61b365db1dcb49c5f34a35ed3bd44c9e13bc7be500bc80b8d9ba1
 
 build:
-  number: 3
+  number: 0
 
 outputs:
   - package:
