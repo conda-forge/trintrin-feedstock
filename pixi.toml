@@ -5,7 +5,7 @@
 
 [workspace]
 name = "trintrin-feedstock"
-version = "3.53.3"  # conda-smithy version used to generate this file
+version = "3.54.2"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/trintrin-feedstock"
 authors = ["@conda-forge/trintrin"]
 channels = ["conda-forge"]
@@ -23,78 +23,78 @@ description = "List contents of all packages found in rattler-build build direct
 [tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build trintrin-feedstock directly (without setup scripts), no particular variant specified"
+[tasks."build-linux_64_libyarp3.12.0"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_libyarp3.12.0.yaml"
+description = "Build trintrin-feedstock with variant linux_64_libyarp3.12.0 directly (without setup scripts)"
+[tasks."inspect-linux_64_libyarp3.12.0"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_libyarp3.12.0.yaml"
+description = "List contents of trintrin-feedstock packages built for variant linux_64_libyarp3.12.0"
 [tasks."build-linux_64_libyarp3.12.1"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_libyarp3.12.1.yaml"
 description = "Build trintrin-feedstock with variant linux_64_libyarp3.12.1 directly (without setup scripts)"
 [tasks."inspect-linux_64_libyarp3.12.1"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_libyarp3.12.1.yaml"
 description = "List contents of trintrin-feedstock packages built for variant linux_64_libyarp3.12.1"
-[tasks."build-linux_64_libyarp3.12.2"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_libyarp3.12.2.yaml"
-description = "Build trintrin-feedstock with variant linux_64_libyarp3.12.2 directly (without setup scripts)"
-[tasks."inspect-linux_64_libyarp3.12.2"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_libyarp3.12.2.yaml"
-description = "List contents of trintrin-feedstock packages built for variant linux_64_libyarp3.12.2"
+[tasks."build-linux_aarch64_libyarp3.12.0"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_libyarp3.12.0.yaml"
+description = "Build trintrin-feedstock with variant linux_aarch64_libyarp3.12.0 directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_libyarp3.12.0"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_libyarp3.12.0.yaml"
+description = "List contents of trintrin-feedstock packages built for variant linux_aarch64_libyarp3.12.0"
 [tasks."build-linux_aarch64_libyarp3.12.1"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_libyarp3.12.1.yaml"
 description = "Build trintrin-feedstock with variant linux_aarch64_libyarp3.12.1 directly (without setup scripts)"
 [tasks."inspect-linux_aarch64_libyarp3.12.1"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_libyarp3.12.1.yaml"
 description = "List contents of trintrin-feedstock packages built for variant linux_aarch64_libyarp3.12.1"
-[tasks."build-linux_aarch64_libyarp3.12.2"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_libyarp3.12.2.yaml"
-description = "Build trintrin-feedstock with variant linux_aarch64_libyarp3.12.2 directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_libyarp3.12.2"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_libyarp3.12.2.yaml"
-description = "List contents of trintrin-feedstock packages built for variant linux_aarch64_libyarp3.12.2"
+[tasks."build-linux_ppc64le_libyarp3.12.0"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_libyarp3.12.0.yaml"
+description = "Build trintrin-feedstock with variant linux_ppc64le_libyarp3.12.0 directly (without setup scripts)"
+[tasks."inspect-linux_ppc64le_libyarp3.12.0"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_libyarp3.12.0.yaml"
+description = "List contents of trintrin-feedstock packages built for variant linux_ppc64le_libyarp3.12.0"
 [tasks."build-linux_ppc64le_libyarp3.12.1"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_libyarp3.12.1.yaml"
 description = "Build trintrin-feedstock with variant linux_ppc64le_libyarp3.12.1 directly (without setup scripts)"
 [tasks."inspect-linux_ppc64le_libyarp3.12.1"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_libyarp3.12.1.yaml"
 description = "List contents of trintrin-feedstock packages built for variant linux_ppc64le_libyarp3.12.1"
-[tasks."build-linux_ppc64le_libyarp3.12.2"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_libyarp3.12.2.yaml"
-description = "Build trintrin-feedstock with variant linux_ppc64le_libyarp3.12.2 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_libyarp3.12.2"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_libyarp3.12.2.yaml"
-description = "List contents of trintrin-feedstock packages built for variant linux_ppc64le_libyarp3.12.2"
+[tasks."build-osx_64_libyarp3.12.0"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_libyarp3.12.0.yaml"
+description = "Build trintrin-feedstock with variant osx_64_libyarp3.12.0 directly (without setup scripts)"
+[tasks."inspect-osx_64_libyarp3.12.0"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_libyarp3.12.0.yaml"
+description = "List contents of trintrin-feedstock packages built for variant osx_64_libyarp3.12.0"
 [tasks."build-osx_64_libyarp3.12.1"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_libyarp3.12.1.yaml"
 description = "Build trintrin-feedstock with variant osx_64_libyarp3.12.1 directly (without setup scripts)"
 [tasks."inspect-osx_64_libyarp3.12.1"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_libyarp3.12.1.yaml"
 description = "List contents of trintrin-feedstock packages built for variant osx_64_libyarp3.12.1"
-[tasks."build-osx_64_libyarp3.12.2"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_libyarp3.12.2.yaml"
-description = "Build trintrin-feedstock with variant osx_64_libyarp3.12.2 directly (without setup scripts)"
-[tasks."inspect-osx_64_libyarp3.12.2"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_libyarp3.12.2.yaml"
-description = "List contents of trintrin-feedstock packages built for variant osx_64_libyarp3.12.2"
+[tasks."build-osx_arm64_libyarp3.12.0"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_libyarp3.12.0.yaml"
+description = "Build trintrin-feedstock with variant osx_arm64_libyarp3.12.0 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_libyarp3.12.0"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_libyarp3.12.0.yaml"
+description = "List contents of trintrin-feedstock packages built for variant osx_arm64_libyarp3.12.0"
 [tasks."build-osx_arm64_libyarp3.12.1"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_libyarp3.12.1.yaml"
 description = "Build trintrin-feedstock with variant osx_arm64_libyarp3.12.1 directly (without setup scripts)"
 [tasks."inspect-osx_arm64_libyarp3.12.1"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_libyarp3.12.1.yaml"
 description = "List contents of trintrin-feedstock packages built for variant osx_arm64_libyarp3.12.1"
-[tasks."build-osx_arm64_libyarp3.12.2"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_libyarp3.12.2.yaml"
-description = "Build trintrin-feedstock with variant osx_arm64_libyarp3.12.2 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_libyarp3.12.2"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_libyarp3.12.2.yaml"
-description = "List contents of trintrin-feedstock packages built for variant osx_arm64_libyarp3.12.2"
+[tasks."build-win_64_libyarp3.12.0"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_libyarp3.12.0.yaml"
+description = "Build trintrin-feedstock with variant win_64_libyarp3.12.0 directly (without setup scripts)"
+[tasks."inspect-win_64_libyarp3.12.0"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_libyarp3.12.0.yaml"
+description = "List contents of trintrin-feedstock packages built for variant win_64_libyarp3.12.0"
 [tasks."build-win_64_libyarp3.12.1"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_libyarp3.12.1.yaml"
 description = "Build trintrin-feedstock with variant win_64_libyarp3.12.1 directly (without setup scripts)"
 [tasks."inspect-win_64_libyarp3.12.1"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_libyarp3.12.1.yaml"
 description = "List contents of trintrin-feedstock packages built for variant win_64_libyarp3.12.1"
-[tasks."build-win_64_libyarp3.12.2"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_libyarp3.12.2.yaml"
-description = "Build trintrin-feedstock with variant win_64_libyarp3.12.2 directly (without setup scripts)"
-[tasks."inspect-win_64_libyarp3.12.2"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_libyarp3.12.2.yaml"
-description = "List contents of trintrin-feedstock packages built for variant win_64_libyarp3.12.2"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
