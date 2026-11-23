@@ -1,0 +1,46 @@
+From 78679a5a7b9dd0582f88045873fd908db8cebf4a Mon Sep 17 00:00:00 2001
+From: Stefano <stefano.dafarra@gmail.com>
+Date: Mon, 23 Nov 2026 09:43:14 +0100
+Subject: [PATCH] Fixed finding of Python
+
+---
+ CMakeLists.txt          | 2 +-
+ bindings/CMakeLists.txt | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 424d4a0..877391e 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,7 +1,7 @@
+ # SPDX-FileCopyrightText: Fondazione Istituto Italiano di Tecnologia (IIT)
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
+-cmake_minimum_required(VERSION 3.16)
++cmake_minimum_required(VERSION 3.18)
+ project(trintrin
+         LANGUAGES CXX
+         VERSION 0.3.1)
+diff --git a/bindings/CMakeLists.txt b/bindings/CMakeLists.txt
+index 598a745..164c594 100644
+--- a/bindings/CMakeLists.txt
++++ b/bindings/CMakeLists.txt
+@@ -10,15 +10,15 @@ else()
+ endif()
+ 
+ if(TRINTRIN_PYTHON_BINDINGS_BUILD_STANDALONE)
+-  cmake_minimum_required(VERSION 3.16)
++  cmake_minimum_required(VERSION 3.18)
+   project(trintrinBindings)
+-  find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
++  find_package(Python3 COMPONENTS Interpreter Development.Module REQUIRED)
+   find_package(pybind11 REQUIRED)
+   find_package(trintrin REQUIRED)
+ endif()
+ 
+ if(TRINTRIN_COMPILE_PYTHON_BINDINGS)
+-    find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
++    find_package(Python3 COMPONENTS Interpreter Development.Module REQUIRED)
+     find_package(pybind11 REQUIRED)
+ 
+     set(NEW_LINE "\n")
